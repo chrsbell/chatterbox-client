@@ -7,6 +7,15 @@ var RoomsView = {
   },
 
   render: function() {
+    //If it does --> only display messages that have matching room property
+
+  },
+
+  //Add renderRoom function
+  renderRoom: function (room) {
+    // if the room does not exist --> add room
+
+
   }
 
 };
