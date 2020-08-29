@@ -1,5 +1,6 @@
 var App = {
 
+
   $spinner: $('.spinner img'),
 
   username: 'anonymous',
@@ -19,11 +20,13 @@ var App = {
 
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
-      debugger;
+      // debugger;
       // examine the response from the server request:
       console.log(data);
-
+      //store data in messages object
+      messages = data;
       callback();
+      MessagesView.render();
     });
   },
 
