@@ -9,7 +9,28 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    
+
+    var text = $('input').first().val();
+
+    //AJAX Post Request Format
+    var message = {
+      username: App.username,
+      text: text,
+      roomname: '4chan'
+    };
+    console.log('message :', message);
+
+    // //success Callback
+    // var sendSuccess = function() {
+    //   console.log('Successfully sent message:' , message);
+    // };
+
+    // var sendFailure = function() {
+    //   console.log('Failed to send message:', message);
+    // };
+
+    Parse.create(message);
+
     console.log('click!');
   },
 
